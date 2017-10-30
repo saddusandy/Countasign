@@ -1,0 +1,43 @@
+<!DOCTYPE html5>
+<html>
+<head>
+  <title> User List</title>   	
+
+<style>
+  h3{
+    font-family: 'Josefin Slab', serif;
+  }
+    .table {
+        border-bottom:0px !important;
+    }
+    .table th, .table td {
+        border: 1px !important;
+    }
+    .fixed-table-container {
+        border:0px !important;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+            <h3 class="text-center well well-sm">List of Users</h3>    
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <!--<th>Id</th>-->
+            <th>User Name  <span class="glyphicon glyphicon-user"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in userlist">
+           <!-- <td>{{user.id}}</td> -->
+            <td><a style="text-decoration: none" ng-href="#!/Dashboard/{{user.id}}">{{user.name}}</a></td>
+          </tr>
+     
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
+
+    

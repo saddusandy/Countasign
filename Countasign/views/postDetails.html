@@ -1,0 +1,39 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Users'Post Details</title>
+
+    <style>
+        h3{
+            font-family: 'Josefin Slab', serif;
+        }
+        h4{
+            margin-left: 30px;
+            font-weight: bold;
+        }
+        blockquote{
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        a{
+            float: right;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+    <body>
+    	<div class="container">
+
+            <h3 class="well well-sm">Post Details</h3>
+
+            <h4>{{postDetails.title}}</h4>
+            <br>
+            <blockquote style="margin-left: 50px" contenteditable="true"> {{postDetails.body}}</blockquote>
+            <br>
+            <div class="well well-sm col-sm-3" style="font-family: 'Josefin Sans', sans-serif">Number of Comments for this post: {{postDetails.commentslistSize}}</div>
+        <br>
+        <br>
+        <a href="#!/userList.html" class="well well-sm">Click me to visit User List Page</a>
+        </div>
+        
+	</body>
+</html>

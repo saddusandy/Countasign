@@ -1,0 +1,64 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title> User Dashboard</title>
+
+  <style>
+
+    h3{
+        font-family: 'Josefin Slab', serif;
+    }
+    h4{
+    color: black;
+    }
+    .table {
+        border-bottom:0px !important;
+    }
+    .table th, .table td {
+        border: 1px !important;
+    }
+    .fixed-table-container {
+        border:0px !important;
+    }
+  
+    
+  </style>
+</head>
+<body>
+
+	<div class="container">
+   <h3 class="well well-sm">Dashboard</h3>   
+		  <div class="row">
+        <div class="col-sm-3" >
+	       <h4><b>User Activities</b></h4>
+
+               <div class="panel panel-default">
+               <div class="panel-heading" style="color: blue">ToDo's</div>
+               <div class="panel-body">{{userDetails.todolistSize}}</div>
+               </div>
+
+               <div class="panel panel-default">
+               <div class="panel-heading" style="color: blue">Posts Count</div>
+               <div class="panel-body">{{userDetails.postslistSize}}</div>
+               </div>
+        </div>
+
+      <div class="col-sm-9" >
+
+      	<h4><b>Summary of posts</b></h4>
+
+      	 <div class="clear-fix"></div>
+          <table class="table table-hover">
+                  <tbody>
+                    <tr ng-repeat="post in userDetails.PostsList">
+                    <!-- <td>{{post.id}}</td> -->
+                    <td><a style="text-decoration: none" ng-href="#!/postDetails/{{post.id}}"><span class="glyphicon glyphicon-envelope"></span>  {{post.title}}</a></td>
+                    </tr>
+                  </tbody>
+          </table>
+        </div>    
+    </div>
+      <a href="#!/userList.html" style="float: right; font-family: 'Josefin Sans', sans-serif;" class="well well-sm">Click me to visit User List Page</a>
+  </div>
+</body>
+</html>
