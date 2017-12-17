@@ -1,2 +1,0 @@
-# Countasign
-Assessment Test
